@@ -1,10 +1,21 @@
 
 
-<div>
-  <nav >
-    <li><a href="/">Inicio</a></li>
-    <li><a href="/">Sobre</a></li>
-    <li><a href="/">Funciones</a></li>
-    <li><a href="/">Descarga</a></li>
-  </nav>
-</div>
+<nav class="fixed top-4 inset-x-0 z-50 mx-auto max-w-5xl rounded-full bg-white/10 backdrop-blur-md px-6 py-4 shadow-lg border border-white/20">
+  <div class="flex items-center justify-between">
+    <!-- Logo -->
+    <div class="text-xl font-bold text-gray-800">
+      GReq
+    </div>
+
+    <!-- Enlaces (Ocultos en móvil) -->
+    <div class="hidden md:flex space-x-8 font-medium text-gray-900">
+      <a href="#" class="hover:text-gray-500 transition">Inicio</a>
+      <a href="#" class="hover:text-gray-500 transition">Sobre</a>
+      <a href="#" class="hover:text-gray-500 transition">Funciones</a>
+      <a href="#" class="hover:text-gray-500 transition">Descarga</a>
+
+    </div>
+
+   
+  </div>
+</nav>
