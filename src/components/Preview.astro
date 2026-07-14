@@ -1,0 +1,30 @@
+<div class="relative flex overflow-hidden">
+
+  <!--Seccion de barra de opciones glass efect -->
+  <div class="bg-white/40 backdrop-blur-md border border-white/50 rounded-2xl w-72 p-4 shadow-lg">
+    <ul class="flex flex-col gap-2">
+      <li class="list-item selected rounded-xl bg-white text-green-600 px-4 py-3 font-medium transition-all duration-300 cursor-pointer">Graficar peticiones</li>
+      <li class="list-item rounded-xl px-4 py-3 font-medium text-gray-700 transition-all duration-300 cursor-pointer hover:bg-white/70 hover:text-green-600">Generar API's de prueba</li>
+      <li class="list-item rounded-xl px-4 py-3 font-medium text-gray-700 transition-all duration-300 cursor-pointer hover:bg-white/70 hover:text-green-600">Detectar y exportar repositorios</li>
+      <li class="list-item rounded-xl px-4 py-3 font-medium text-gray-700 transition-all duration-300 cursor-pointer hover:bg-white/70 hover:text-green-600">Crear mockups de interfaces</li>
+    </ul>
+  </div>
+
+  <!--Seccion de imagenes por cada opcion que se eliga -->
+  <div>
+
+  </div>
+</div>
+
+<script>
+  document.querySelectorAll('.list-item').forEach(el => {
+    el.addEventListener('click', () => {
+      document.querySelectorAll('.list-item').forEach(i => {
+        i.classList.remove('bg-white', 'text-green-600');
+        i.classList.add('text-gray-700', 'hover:bg-white/70', 'hover:text-green-600');
+      });
+      el.classList.add('bg-white', 'text-green-600');
+      el.classList.remove('text-gray-700', 'hover:bg-white/70', 'hover:text-green-600');
+    });
+  });
+</script>
