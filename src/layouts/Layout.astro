@@ -1,5 +1,6 @@
 ---
 import '../styles/global.css';
+import Glow from '../components/Glow.astro';
 ---
 
 <!doctype html>
@@ -12,8 +13,9 @@ import '../styles/global.css';
 		<meta name="generator" content={Astro.generator} />
 		<title>GReq</title>
 	</head>
-	<body class=" bg-gradient-to-br from-red-100/50 to-green-300/30 min-h-screen">
-		<main class="pt-20 flex flex-col items-center">
+	<body class=" ">
+		<Glow />
+		<main class="pt-20 flex flex-col items-center relative z-10">
 			<slot />
 		</main>
 	</body>
