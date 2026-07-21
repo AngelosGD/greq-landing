@@ -4,28 +4,23 @@ import Glow from '../components/Glow.astro';
 ---
 
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>GReq</title>
-	</head>
-	<body class=" ">
-		<Glow />
-		<main class="pt-20 flex flex-col items-center relative z-10">
-			<slot />
-		</main>
-	</body>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width" />
+  <meta name="description" content="GReq — Diagrama, diseña y prueba endpoints de API. Todo en un solo lugar." />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="icon" href="/favicon.ico" />
+  <meta name="generator" content={Astro.generator} />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300..700&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+  <title>GReq — Diseño de Endpoints</title>
+</head>
+<body class="bg-zinc-950 text-zinc-100 antialiased font-sans">
+  <Glow />
+  <main class="relative z-10">
+    <slot />
+  </main>
+</body>
 </html>
-
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
