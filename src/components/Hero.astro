@@ -1,32 +1,48 @@
 <section class="min-h-[100dvh] flex flex-col items-center justify-center px-6 pt-24 pb-20">
   <div class="max-w-4xl mx-auto text-center">
-    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono tracking-wider uppercase mb-8">
+    <div class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-400 text-xs font-mono tracking-wider uppercase mb-8" style="animation: fadeUpIn 0.6s 0.05s both;">
       <span class="size-1.5 rounded-full bg-emerald-400 animate-pulse" />
       Herramienta para diseñadores de API
     </div>
 
     <h1 class="text-5xl sm:text-6xl lg:text-7xl font-bold leading-[1.1] tracking-tight text-zinc-100">
-      Diagrama, diseña y prueba
+      <span class="word" style="animation-delay: 0.15s">Diagrama,</span>
+      <span class="word" style="animation-delay: 0.25s">diseña</span>
+      <span class="word" style="animation-delay: 0.35s">y</span>
+      <span class="word" style="animation-delay: 0.45s">prueba</span>
       <br />
-      <span class="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-300">
+      <span class="word text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 to-emerald-300 glitch" style="animation-delay: 0.55s">
         endpoints de API
       </span>
     </h1>
 
-    <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed">
-      Todo en un solo lugar. Diseña visualmente, genera APIs de prueba, 
-      y exporta tu documentación — sin complicaciones.
+    <p class="mt-6 text-lg sm:text-xl text-zinc-400 max-w-2xl mx-auto leading-relaxed min-h-[1.5em]" id="typewriter-text">
+      <span id="typewriter-target"></span>
     </p>
 
     <div class="mt-10 flex flex-col sm:flex-row items-center justify-center gap-4">
-      <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 px-6 py-3.5 text-sm font-semibold text-zinc-950 transition-all duration-200 active:scale-[0.98]">
+      <a href="#" class="inline-flex items-center gap-2 rounded-xl bg-emerald-500 hover:bg-emerald-400 px-6 py-3.5 text-sm font-semibold text-zinc-950 transition-all duration-200 active:scale-[0.98]" style="animation: fadeUpIn 0.6s 0.8s both;">
         <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
         Probar demo
       </a>
-      <a href="#" class="inline-flex items-center gap-2 rounded-xl border border-zinc-700 hover:border-zinc-500 px-6 py-3.5 text-sm font-medium text-zinc-300 hover:text-zinc-100 transition-all duration-200 active:scale-[0.98]">
+      <a href="#" class="inline-flex items-center gap-2 rounded-xl border border-zinc-700 hover:border-zinc-500 px-6 py-3.5 text-sm font-medium text-zinc-300 hover:text-zinc-100 transition-all duration-200 active:scale-[0.98]" style="animation: fadeUpIn 0.6s 0.9s both;">
         <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
         Ver guía
       </a>
     </div>
   </div>
 </section>
+
+<script>
+  const target = document.getElementById('typewriter-target')!;
+    const text = 'Todo en un solo lugar. Diseña visualmente, genera APIs de prueba, y exporta tu documentación — sin complicaciones.';
+    let i = 0;
+    function type() {
+      if (i < text.length) {
+        target.textContent += text.charAt(i);
+        i++;
+        setTimeout(type, 18 + Math.random() * 22);
+      }
+    }
+    setTimeout(type, 1100);
+</script>
